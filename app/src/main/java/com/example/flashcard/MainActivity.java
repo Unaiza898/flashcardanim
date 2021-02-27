@@ -15,9 +15,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View view) {
-                findViewById(R.id.question).setVisibility(view.INVISIBLE);
-                findViewById(R.id.answer).setVisibility(view.VISIBLE);
+                findViewById(R.id.question).setVisibility(View.INVISIBLE);
+                findViewById(R.id.answer).setVisibility(View.VISIBLE);
 
+
+            }
+        });
+        findViewById(R.id.answer).setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                findViewById(R.id.question).setVisibility(View.VISIBLE);
+                findViewById(R.id.answer).setVisibility(View.INVISIBLE);
+
+
+            }
+        });
+        findViewById(R.id.choice1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.choice1).setBackgroundColor(getResources().getColor(R.color.my_red_color,null));
+
+            }
+        });
+        findViewById(R.id.choice2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.choice2).setBackgroundColor(getResources().getColor(R.color.my_red_color,null));
+
+            }
+        });
+        findViewById(R.id.choice3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.choice3).setBackgroundColor(getResources().getColor(R.color.Green,null));
 
             }
         });

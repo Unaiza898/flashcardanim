@@ -3,4 +3,15 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="Purple">#c6aec7</color>
+    <color name="Yellow">#f0c05a</color>
+    <color name="Black">#000</color>
+    <color name="White">#fff</color>
+    <color name="Orange">#f0c05a</color>
+    <color name="Babypink">#df72e0</color>
+    <color name="Pinkish">#f77495</color>
+    <color name="Maroon">#f0938d</color>
+    <color name="my_red_color">#ee0000</color>
+    <color name="Green">#54a166</color>
+
 </resources>
