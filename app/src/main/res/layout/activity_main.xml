@@ -13,7 +13,7 @@
         android:gravity="center"
         android:text="Who is the 44th President of the United States?"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
         android:elevation="5dp"
         android:textSize="40sp"
 
@@ -30,47 +30,7 @@
         android:visibility="invisible"
 
         />
-    <TextView
-        android:id="@+id/choice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@id/question"
-        android:text="Bill Clinton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textSize="40sp"
-        android:background="@color/Maroon"
-        android:visibility="invisible"
 
-        />
-    <TextView
-        android:id="@+id/choice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="George H.W Bush"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textSize="40sp"
-        android:background="@color/Maroon"
-        android:layout_below="@id/choice1"
-        android:visibility="invisible"
-        />
-    <TextView
-        android:id="@+id/choice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Barack obama"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:textSize="40sp"
-        android:background="@color/Maroon"
-        android:layout_below="@id/choice2"
-        android:visibility="invisible"
-
-        />
 
     <ImageView
         android:id="@+id/arrow"
@@ -78,13 +38,17 @@
         android:layout_height="70dp"
         android:src="@drawable/arrowbtn"
         android:layout_alignEnd="@id/question"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="250dp"
+
         />
+
+
+
     <ImageView
         android:id="@+id/addbutton"
         android:layout_width="100dp"
         android:layout_height="70dp"
-        android:layout_alignLeft="@id/choice3"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="-57dp"

@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         findViewById(R.id.arrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (allFlashcards.size() == 0)
                     return;
+
+                if(currentCardDisplayedIndex >= allFlashcards.size()) {
+
+                    currentCardDisplayedIndex = 0;
+                }
 
                 currentCardDisplayedIndex++;
 
