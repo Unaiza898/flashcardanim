@@ -10,13 +10,28 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashcards;
+    int currentCardDisplayedIndex = 0;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         TextView receiver_msg;
+        setContentView(R.layout.activity_main);
+
+        flashcardDatabase = new FlashcardDatabase(this);
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.answer)).setText(allFlashcards.get(0).getAnswer());
+        }
         setContentView(R.layout.activity_main);
         findViewById(R.id.question).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +66,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+                if (allFlashcards.size() == 0)
+                    return;
+
+                currentCardDisplayedIndex++;
+
+                allFlashcards = flashcardDatabase.getAllCards();
+                Flashcard flashcard = allFlashcards.get(currentCardDisplayedIndex);
+
+                ((TextView) findViewById(R.id.question)).setText(flashcard.getAnswer());
+                ((TextView) findViewById(R.id.answer)).setText(flashcard.getQuestion());
+
+
             }
         });
 
@@ -70,14 +98,19 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if (requestCode == 100) { // this 100 needs to match the 100 we used when we called startActivityForResult!
-          String string1 = data.getExtras().getString("string1"); // 'string1' needs to match the key we used when we put the string in the Intent
-           String string2 = data.getExtras().getString("string2");
-            ((TextView) findViewById(R.id.question)).setText(string1);
-          ((TextView) findViewById(R.id.answer)).setText(string2);
+            super.onActivityResult(requestCode, resultCode, data);
+            if (requestCode == 100 && resultCode == RESULT_OK) {
+                String question = data.getExtras().getString("string1");
+                String answer = data.getExtras().getString("string2");
 
+                ((TextView) findViewById(R.id.question)).setText(question);
+                ((TextView) findViewById(R.id.answer)).setText(answer);
+
+                flashcardDatabase.insertCard(new Flashcard(question, answer));
+                allFlashcards = flashcardDatabase.getAllCards();
+            }
         }
 
 
-    }
+
 }
