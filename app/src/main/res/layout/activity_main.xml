@@ -73,6 +73,14 @@
         />
 
     <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:src="@drawable/arrowbtn"
+        android:layout_alignEnd="@id/question"
+        android:layout_marginTop="195dp"
+        />
+    <ImageView
         android:id="@+id/addbutton"
         android:layout_width="100dp"
         android:layout_height="70dp"
@@ -81,5 +89,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="-57dp"
         android:layout_marginBottom="26dp"
-        android:src="@drawable/addbtn" />
+        android:src="@drawable/addbutton" />
 </RelativeLayout>
