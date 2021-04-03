@@ -112,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
                         // we don't need to worry about this method
                     }
                 });
+                findViewById(R.id.question).setVisibility(View.VISIBLE);
+                findViewById(R.id.answer).setVisibility(View.INVISIBLE);
+
+
                 // don't try to go to next card if you have no cards to begin with
                 if (allFlashcards.size() == 0)
                     return;
@@ -131,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                 allFlashcards = flashcardDatabase.getAllCards();
                 Flashcard flashcard = allFlashcards.get(currentCardDisplayedIndex);
 
-                ((TextView) findViewById(R.id.question)).setText(flashcard.getAnswer());
-                ((TextView) findViewById(R.id.answer)).setText(flashcard.getQuestion());
+                ((TextView) findViewById(R.id.answer)).setText(flashcard.getAnswer());
+                ((TextView) findViewById(R.id.question)).setText(flashcard.getQuestion());
             }
 
         });
