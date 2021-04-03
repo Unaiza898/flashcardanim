@@ -1,23 +1,20 @@
-# Flashcardsavingdata
-📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
 
-## Lab 3
+## Lab 4
 
 ### App Description
-This apps allows user to save multiple questions and answers and allows the user to view the questions.
-
+This app gives user animation when user move through the card and add a new card.
 ### App Walk-though
-![movecard3](https://user-images.githubusercontent.com/65740643/111887759-a1b0d400-89ad-11eb-8794-9f6025a61833.gif)
+![Flashcardanim1](https://user-images.githubusercontent.com/65740643/113470154-5ec91480-9421-11eb-9e02-2e66f40aa435.gif)
 
 
 
 ## Required
-- [X] User can create a card and still see their created card when the app is relaunched.
-- [X] User can create muliple cards and browse through all created cards
-- 
+- [X] User sees a transition animation when going from the main screen to the add card screen.
+- [X] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [X] User sees flashcards animating in / out when the 'next' button is tapped
 
 ## Optional
-- [ ] User can delete a card and no longer see it in their deck anymore
-- [ ] Flashcards are shown in random order instead of the order they were created in
-- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
-- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+- [X] Extra styling is added!
+- [ ] User sees a countdown timer for each question
+- [ ] User sees a 'card flip' animation when the card is tapped
+- [ ] User sees a celebration animation with confetti when they answer a question correctly
